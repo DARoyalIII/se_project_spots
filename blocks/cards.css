@@ -1,0 +1,50 @@
+.cards {
+  max-width: 1280px;
+  height: 970px;
+  border-bottom: 1px solid #21212166;
+  padding-bottom: 40px;
+}
+
+.cards__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 40px;
+  list-style-type: none;
+  padding: 20px 0px 0px;
+  margin: 0;
+}
+
+.card {
+  max-width: 413px;
+  max-height: 445px;
+}
+
+.card__image {
+  max-width: 413px;
+  max-height: 413px;
+  padding-bottom: 12px;
+}
+
+.card__info {
+  font-family: "Poppins 500";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.data-wrapper {
+  display: flex;
+}
+
+.card__heart {
+  margin-left: auto;
+  opacity: 0.4;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card__heart:hover {
+  opacity: 1;
+}
