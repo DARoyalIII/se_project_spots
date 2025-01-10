@@ -2,7 +2,7 @@
 
 ### Overview
 
-Spots is a social media website where users will be able to perform slight adjustments to their profile, add/remove photos and like other user photos.
+The third project for the Software Engineering program at Tripleten. Spots is a social media website where users will be able to perform slight adjustments to their profile, add/remove photos and like other user photos.
 
 - Intro
 - Figma
@@ -14,10 +14,6 @@ This project is made so all the elements are displayed correctly on popular scre
 
 **Figma**
 
-- [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
+- [Link to the project](https://daroyaliii.github.io/se_project_spots/)
 
 **Images**
-
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster.
-
-Good luck and have fun!
