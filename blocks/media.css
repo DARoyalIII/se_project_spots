@@ -1,50 +1,107 @@
-@media screen and (max-width: 630px) {
-  .content {
-    max-width: 100r;
-    padding: 0px 20px 0px 20px;
+@media screen and (max-width: 700px) {
+  .profile {
+    flex-direction: column;
+    max-width: 288px;
+    max-height: 346px;
     margin: auto;
+    padding: 20px 16px;
+    margin-bottom: 20px;
   }
 
-  .profile {
-    max-width: 744px;
-    height: 274px;
+  .profile-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 20px;
   }
 
   .profile__image {
-    max-width: 9%;
-    max-height: 9%;
-    border-radius: 8px;
+    width: 80px;
+    height: 80px;
   }
 
-  .cards__list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(288px, 1fr));
-    column-gap: 20px;
-    row-gap: 40px;
-    list-style-type: none;
-    padding: 20px 0px 0px;
-    margin: 0;
+  .profile__column {
+    align-items: center;
+  }
+
+  .profile__title {
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    max-width: 288px;
+    text-align: center;
+  }
+
+  .profile__subtitle {
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    padding: 0;
+    margin-top: 6px;
+    max-width: 288px;
+  }
+
+  .profile__edit-button {
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    color: #212121b3;
+    border: 0;
+    background-color: #fcf5e5;
+    padding-top: 32px;
+    text-align: center;
+  }
+
+  .profile__newpost-button {
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    max-width: 288px;
+    max-height: 52px;
+    background-color: #212121;
+    color: #fcf5e5;
+    padding: 18px 32px 18px 32px;
+    border-radius: 8px;
+    align-self: stretch;
   }
 
   .card {
     max-width: 288px;
     max-height: 318px;
-    margin: auto;
+  }
+
+  .cards__list {
+    margin: 0;
+    grid-template-columns: repeat(auto-fit, 288px);
+    grid-template-rows: repeat(2, 318px);
+    row-gap: 20px;
+  }
+
+  .card__image {
+    max-width: 288px;
+    max-height: 288px;
+    border-radius: 8px;
+    display: block;
   }
 
   .card__info {
     font-family: "Poppins";
     font-size: 16px;
     font-weight: 500;
-    line-height: 1.2;
-    margin: 0;
+    line-height: 1;
   }
 
-  .card__image {
-    width: 288px;
-    max-height: 288px;
-    border-radius: 8px;
-    display: block;
+  .title-limit {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-clamp: 3;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 }
