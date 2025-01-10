@@ -8,12 +8,18 @@ The third project for the Software Engineering program at Tripleten. Spots is a 
 - Figma
 - Images
 
-**Intro**
+### Technologies/Tools
 
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.
+- HTML
+- CSS
+- Flexbox
+- Grid
+- Figma
 
-**Figma**
+This project was assembled from a Figma design brief using the above tools for a responsive design. The completed stage of this project can adapt to tablet and phone screen sizes from a desktop display of 1440p.
 
 - [Link to the project](https://daroyaliii.github.io/se_project_spots/)
 
-**Images**
+### Updates
+
+The next iterations of this website will include javascript to enable full functionality.
