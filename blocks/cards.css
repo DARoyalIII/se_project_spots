@@ -1,13 +1,13 @@
 .cards {
-  max-width: 1280px;
-  height: 970px;
+  max-height: 970px;
   border-bottom: 1px solid #21212166;
   padding-bottom: 40px;
+  max-width: 1280px;
 }
 
 .cards__list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(413px, 1fr));
   grid-template-rows: repeat(2, 1fr);
   column-gap: 20px;
   row-gap: 40px;
@@ -22,29 +22,38 @@
 }
 
 .card__image {
-  max-width: 413px;
+  width: 413px;
   max-height: 413px;
-  padding-bottom: 12px;
+  border-radius: 8px;
+  display: block;
 }
 
 .card__info {
-  font-family: "Poppins 500";
+  font-family: "Poppins";
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
   margin: 0;
 }
 
-.data-wrapper {
-  display: flex;
-}
-
 .card__heart {
   margin-left: auto;
+  background-image: url(../images/heart.svg);
+  width: 23px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
   opacity: 0.4;
   transition: opacity 0.5s ease-in-out;
+  padding: 0;
+  cursor: pointer;
 }
 
 .card__heart:hover {
   opacity: 1;
+}
+
+.data-wrapper {
+  display: flex;
+  padding-top: 12px;
 }
