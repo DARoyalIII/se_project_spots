@@ -1,5 +1,4 @@
 .cards {
-  max-height: 970px;
   border-bottom: 1px solid #21212166;
   padding-bottom: 40px;
   max-width: 1280px;
@@ -7,13 +6,13 @@
 
 .cards__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(413px, 1fr));
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, 413px);
+  grid-template-rows: repeat(2, 445px);
   column-gap: 20px;
   row-gap: 40px;
   list-style-type: none;
   padding: 20px 0px 0px;
-  margin: 0;
+  justify-content: center;
 }
 
 .card {

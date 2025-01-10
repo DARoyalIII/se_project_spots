@@ -1,7 +1,6 @@
 .profile {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   max-height: 210px;
   border-bottom: 1px solid #21212166;
   padding: 34px 0px 20px 0px;
@@ -43,8 +42,8 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 1;
-  width: 149px;
-  height: 52px;
+  max-width: 149px;
+  max-height: 52px;
   background-color: #212121;
   color: #fcf5e5;
   padding: 18px 24px 18px 24px;
