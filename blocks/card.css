@@ -10,6 +10,11 @@
   display: block;
 }
 
+.card__data {
+  display: flex;
+  padding-top: 12px;
+}
+
 .card__info {
   font-family: "Poppins";
   font-size: 20px;
@@ -38,9 +43,4 @@
 
 .card__heart:hover {
   opacity: 1;
-}
-
-.data-wrapper {
-  display: flex;
-  padding-top: 12px;
 }
