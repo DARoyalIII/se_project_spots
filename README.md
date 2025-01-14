@@ -26,4 +26,4 @@ The next iterations of this website will include javascript to enable full funct
 
 ### Video Presentation
 
-- [Link to presentation] (https://drive.google.com/file/d/1aqxsMbLoJ-UUR6cQOFJsDTzDRQX1gn_x/view?usp=drive_link)
+- [Link to presentation](https://drive.google.com/file/d/1aqxsMbLoJ-UUR6cQOFJsDTzDRQX1gn_x/view?usp=drive_link)
