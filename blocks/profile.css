@@ -20,7 +20,6 @@
 .profile__column {
   display: flex;
   flex-direction: column;
-  gap: 18px;
   justify-content: space-between;
 }
 
@@ -62,11 +61,12 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 1;
-  max-width: 149px;
+  width: 149px;
   max-height: 52px;
   background-color: #212121;
   color: #fcf5e5;
-  padding: 18px 24px 18px 24px;
+  padding: 18px 0px 18px 0px;
+  border: none;
   border-radius: 8px;
   align-self: flex-end;
   transition: background-color 0.5s ease-in-out;
@@ -118,7 +118,7 @@
     flex-direction: column;
     max-width: 288px;
     margin: auto;
-    padding: 20px 16px;
+    padding: 20px 0px 20px 0px;
     margin-bottom: 20px;
   }
 
@@ -136,6 +136,7 @@
 
   .profile__column {
     align-items: center;
+    gap: 32px;
   }
 
   .profile__title {
@@ -152,13 +153,12 @@
   }
 
   .profile__edit-button {
-    padding-top: 32px;
     text-align: center;
   }
 
   .profile__newpost-button {
-    max-width: 288px;
-    padding: 18px 32px 18px 32px;
-    align-self: stretch;
+    width: 288px;
+    padding: 18px 0px 18px 0px;
+    align-self:center
   }
 }
