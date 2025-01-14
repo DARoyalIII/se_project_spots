@@ -23,3 +23,7 @@ This project was assembled from a Figma design brief using the above tools for a
 ### Updates
 
 The next iterations of this website will include javascript to enable full functionality.
+
+### Video Presentation
+
+- [Link to presentation] (https://drive.google.com/file/d/1aqxsMbLoJ-UUR6cQOFJsDTzDRQX1gn_x/view?usp=drive_link)
