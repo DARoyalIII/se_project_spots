@@ -43,29 +43,15 @@
 @media screen and (max-width: 900px) {
   .card {
     max-width: 288px;
-    max-height: 318px;
   }
 
   .card__image {
     max-width: 288px;
     max-height: 288px;
-    border-radius: 8px;
-    display: block;
   }
 
   .card__info {
-    font-family: "Poppins";
     font-size: 16px;
-    font-weight: 500;
     line-height: 1;
-  }
-
-  .title-limit {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    line-clamp: 3;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
   }
 }
