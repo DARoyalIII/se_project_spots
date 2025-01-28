@@ -120,7 +120,7 @@
 
 @media screen and (max-width: 900px) {
   .modal__container {
-    width: 300px;
+    max-width: 300px;
     padding: 12px;
     gap: 24px;
   }

@@ -30,35 +30,32 @@ const profileEdit = document.querySelector(".profile__edit-button");
 const editModal = document.querySelector("#edit-modal");
 const closeModal = document.querySelector(".modal__close-btn");
 
-profileEdit.addEventListener("click", function () {
-  editModal.classList.add("modal_opened");
-});
-
-closeModal.addEventListener("click", function () {
-  editModal.classList.remove("modal_opened");
-});
-
 const profileName = document.querySelector(".profile__title");
 const profileSub = document.querySelector(".profile__subtitle");
 const editModalName = document.querySelector("#name");
 const editModalDescrip = document.querySelector("#description");
 
-editModalName.value = profileName.textContent;
-editModalDescrip.value = profileSub.textContent;
+const cardTemplate = document.querySelector("#card-template");
+const cardsList = document.querySelector(".cards__list")
 
-const profileFormElement = document.querySelector(".modal__form");
+const profileForm = document.forms["profile-form"];
+
+function exitModal() {
+  editModal.classList.remove("modal_opened");
+}
+
+profileEdit.addEventListener("click", function () {
+  editModal.classList.add("modal_opened");
+  editModalName.value = profileName.textContent;
+  editModalDescrip.value = profileSub.textContent;
+});
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = editModalName.value;
   profileSub.textContent = editModalDescrip.value;
-  editModal.classList.remove("modal_opened");
+  exitModal();
 }
-
-profileFormElement.addEventListener("submit", handleProfileFormSubmit);
-
-const cardTemplate = document.querySelector("#card-template");
-const cardsList = document.querySelector(".cards__list")
 
 function getCardElement(data) {
   const cardElement = cardTemplate.content.querySelector(".card").cloneNode(true);
@@ -77,3 +74,21 @@ for (let i = 0; i < initialCards.length; i++) {
   const cardElement = getCardElement(initialCards[i]);
   cardsList.append(cardElement);
 }
+
+closeModal.addEventListener("click", exitModal);
+profileFormElement.addEventListener("submit", handleProfileFormSubmit);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
