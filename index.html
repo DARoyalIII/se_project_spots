@@ -1,154 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Dudley Royal" />
-    <meta name="description" content="Spots social media page" />
-    <meta name="keywords" content="social, media, Spots" />
-    <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
-    <title>Spots</title>
-  </head>
-  <body>
-    <div class="page-wrapper">
-      <!-- Break  -->
-      <!-- Header  -->
-      <header class="header">
-        <img
-          src="./images/Headerlogo.svg"
-          alt="Spots header logo"
-          class="header__logo"
-        />
-      </header>
-      <main class="content">
-        <!-- Break -->
-        <!-- Profile  -->
-        <section class="profile">
-          <div class="profile__card">
-            <img
-              src="./images/avatar.jpg"
-              alt="Profile avatar"
-              class="profile__image"
-            />
-            <div class="profile__column">
-              <div class="profile__titles">
-                <h1 class="profile__title">Bessie Coleman</h1>
-                <p class="profile__subtitle">Civil Aviator</p>
-              </div>
-              <button type="button" class="profile__edit-button">
-                <img
-                  src="./images/edit2.svg"
-                  alt="Edit button"
-                  class="profile__edit-img"
-                />Edit Profile
-              </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Dudley Royal" />
+  <meta name="description" content="Spots social media page" />
+  <meta name="keywords" content="social, media, Spots" />
+  <link rel="stylesheet" href="./pages/index.css" />
+  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  <title>Spots</title>
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Break  -->
+    <!-- Header  -->
+    <header class="header">
+      <img src="./images/Headerlogo.svg" alt="Spots header logo" class="header__logo" />
+    </header>
+    <main class="content">
+      <!-- Break -->
+      <!-- Profile  -->
+      <section class="profile">
+        <div class="profile__card">
+          <img src="./images/avatar.jpg" alt="Profile avatar" class="profile__image" />
+          <div class="profile__column">
+            <div class="profile__titles">
+              <h1 class="profile__title">Bessie Coleman</h1>
+              <p class="profile__subtitle">Civil Aviator</p>
             </div>
+            <button type="button" class="profile__edit-button">
+              <img src="./images/edit2.svg" alt="Edit button" class="profile__edit-img" />Edit Profile
+            </button>
           </div>
-          <button type="button" class="profile__newpost-button">
-            <img
-              src="./images/Newpost.svg"
-              alt="Add new post"
-              class="profile__newpost-image"
-            />New Post
-          </button>
-        </section>
-        <!-- Break  -->
-        <!-- Cards  -->
-        <section class="cards">
-          <ul class="cards__list">
-            <li class="card">
-              <img
-                src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="Val Thorens"
-                class="card__image"
-              />
-              <div class="card__data">
-                <h2 class="card__info">Val Thorens</h2>
-                <button type="button" class="card__heart"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/2-photo-by-ceiline-from-pexels.jpg"
-                alt="Restaurant terrace"
-                class="card__image"
-              />
-              <div class="card__data">
-                <h2 class="card__info">Restaurant terrace</h2>
-                <button type="button" class="card__heart"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-                alt="Outdoor cafe"
-                class="card__image"
-              />
-              <div class="card__data">
-                <h2 class="card__info">An outdoor cafe</h2>
-                <button type="button" class="card__heart"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
-                alt="Bridge over forest"
-                class="card__image"
-              />
-              <div class="card__data">
-                <h2 class="card__info">A very long bridge,over the forest</h2>
-                <button type="button" class="card__heart"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-                alt="Tunnel with light"
-                class="card__image"
-              />
-              <div class="card__data">
-                <h2 class="card__info">Tunnel with morning light</h2>
-                <button type="button" class="card__heart"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="Mountain house"
-                class="card__image"
-              />
-              <div class="card__data">
-                <h2 class="card__info">Mountain house</h2>
-                <button type="button" class="card__heart"></button>
-              </div>
-            </li>
-          </ul>
-        </section>
-      </main>
-      <footer class="footer">
-        <p class="footer__info">2024 &copy; Spots</p>
-      </footer>
-      <div class="modal">
-<div class="modal__container">
-<form action="modal__form">
-  <div class="modal__heading">
-  <h2 class="modal__title">Edit profile</h2>
-  <button type="button" class="modal__close-btn"><img src="./images/Group 27.svg" alt="Close window" class="modal__close-img"></button>
-  </div>
-  <fieldset class="modal__fieldset">
-    <label for="name" class="modal__label">Name</label>
-    <input type="text" id="name" class="modal__input" placeholder="Name">
-    <label for="description" class="modal__label">Description</label>
-    <input type="text" id="description" class="modal__input" placeholder="Description">
-    <button type="submit" class="modal__save-btn">Save</button>
-  </fieldset>
-</form>
-</div>
-</div>
+        </div>
+        <button type="button" class="profile__newpost-button">
+          <img src="./images/Newpost.svg" alt="Add new post" class="profile__newpost-image" />New Post
+        </button>
+      </section>
+      <!-- Break  -->
+      <!-- Cards  -->
+      <section class="cards">
+        <ul class="cards__list">
+          <template id="card-template">
+          <li class="card">
+            <img src="" alt="" class="card__image" />
+            <div class="card__data">
+              <h2 class="card__info"></h2>
+              <button type="button" class="card__heart"></button>
+            </div>
+          </li>
+          </template>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__info">2024 &copy; Spots</p>
+    </footer>
+    <div class="modal" id="edit-modal">
+      <div class="modal__container">
+        <div class="modal__head">
+        <h2 class="modal__title">Edit profile</h2>
+        <button type="button" class="modal__close-btn"></button>
+        </div>
+        <form class="modal__form">
+            <label for="name" class="modal__label">Name
+              <input type="text" id="name" class="modal__input" placeholder="Type your name">
+            </label>
+            <label for="description" class="modal__label">Description
+              <input type="text" id="description" class="modal__input" placeholder="Describe yourself">
+            </label>
+            <button type="submit" class="modal__save-btn">Save</button>
+        </form>
+      </div>
     </div>
-    <script src="./scripts/index.js" defer></script>
-  </body>
+  </div>
+  <script src="./scripts/index.js" defer></script>
+</body>
 </html>
-
-
