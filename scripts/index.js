@@ -37,7 +37,7 @@ const editModalDescrip = document.querySelector("#description");
 
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list")
-
+const profileFormElement = document.querySelector(".modal__form");
 const profileForm = document.forms["profile-form"];
 
 function exitModal() {
