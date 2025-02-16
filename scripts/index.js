@@ -42,8 +42,7 @@ const profileForm = document.forms["profile-form"];
 
 // Card elements
 const cardTemplate = document.querySelector("#card-template");
-const cardsList = document.querySelector(".cards__list")
-
+const cardsList = document.querySelector(".cards__list");
 
 // New post elements
 const postModal = document.querySelector("#post-modal-add");
@@ -51,6 +50,13 @@ const postClose = postModal.querySelector(".modal__close-btn");
 const postFormElement = postModal.querySelector(".post-modal__form");
 const addImage = postModal.querySelector("#image");
 const addCaption = postModal.querySelector("#caption");
+
+
+// Picture preview
+const picModal = document.querySelector("#preview-modal");
+const picModalImg = picModal.querySelector(".pic-modal__img");
+const picModalCap = picModal.querySelector(".pic-modal__title");
+const PicModalExit = picModal.querySelector(".pic-modal__close");
 
 // Profile edit modal events
 closeModal.addEventListener("click", () => {
@@ -97,12 +103,39 @@ function handleProfileFormSubmit(evt) {
 // Creating new cards and appending array data
 function getCardElement(data) {
   const cardElement = cardTemplate.content.querySelector(".card").cloneNode(true);
+  const cardDelete = cardElement.querySelector(".card__delete");
+  const cardHeart = cardElement.querySelector(".card__heart");
   const cardNameEle = cardElement.querySelector(".card__info");
   const cardImgEle = cardElement.querySelector(".card__image");
+
   cardImgEle.alt = data.name;
   cardNameEle.textContent = data.name;
   cardImgEle.src = data.link;
   cardsList.append(cardElement);
+
+  // Picture preview
+  cardImgEle.addEventListener("click", () => {
+    openModal(picModal);
+    picModalImg.src = data.link;
+    picModalImg.alt = data.name;
+    picModalCap.textContent = data.name;
+  });
+
+  PicModalExit.addEventListener("click", () => {
+    exitModal(picModal);
+  })
+
+
+  // Toggle like
+  cardHeart.addEventListener("click", () => {
+    cardHeart.classList.toggle("card__heart_liked");
+  });
+
+  // Remove card
+  cardDelete.addEventListener("click", () => {
+    cardElement.remove();
+  });
+
   return cardElement;
 }
 
@@ -117,13 +150,10 @@ function handleNewPostSubmit(evt) {
   console.log(newCard);
   const cardEl = getCardElement(newCard);
   cardsList.prepend(cardEl);
-  addCardToArray(newCard);
   exitModal(postModal);
 }
 
-function addCardToArray(item) {
-  initialCards.push(handleNewPostSubmit);
-}
+
 
 
 

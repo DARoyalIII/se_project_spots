@@ -43,6 +43,7 @@
         <ul class="cards__list">
           <template id="card-template">
           <li class="card">
+            <button type="button" class="card__delete"></button>
             <img src="" alt="" class="card__image" />
             <div class="card__data">
               <h2 class="card__info"></h2>
@@ -85,6 +86,15 @@
         <label for="caption" class="post-modal__label">Caption<input type="text" id="caption" class="post-modal__input" placeholder="Type your caption"></label>
         <button type="submit" class="post-modal__save-btn">Save</button>
       </form>
+    </div>
+  </div>
+  <div class="pic-modal" id="preview-modal">
+    <div class="pic-modal__container">
+      <div class="pic-modal__info">
+      <img src="" alt="" class="pic-modal__img">
+      <h2 class="pic-modal__title"></h2>
+      </div>
+      <button class="pic-modal__close"></button>
     </div>
   </div>
   <script src="./scripts/index.js" defer></script>
