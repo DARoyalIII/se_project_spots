@@ -74,6 +74,19 @@
       </div>
     </div>
   </div>
+  <div class="post-modal" id="post-modal-add">
+    <div class="post-modal__container">
+      <div class="post-modal__head">
+        <h2 class="post-modal__title">New post</h2>
+        <button class="modal__close-btn"></button>
+      </div>
+      <form class="post-modal__form">
+        <label for="image" class="post-modal__label">Image link<input type="url" id="image" class="post-modal__input" placeholder="Paste a link to the picture"></label>
+        <label for="caption" class="post-modal__label">Caption<input type="text" id="caption" class="post-modal__input" placeholder="Type your caption"></label>
+        <button type="submit" class="post-modal__save-btn">Save</button>
+      </form>
+    </div>
+  </div>
   <script src="./scripts/index.js" defer></script>
 </body>
 </html>

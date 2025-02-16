@@ -1,0 +1,157 @@
+.post-modal {
+  background-color: #00000080;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+}
+
+.modal_opened {
+  visibility: visible;
+}
+
+.post-modal__container {
+  max-width: 730px;
+  background-color: #ffffff;
+  padding: 32px 50px;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.post-modal__head {
+  display: flex;
+  gap: 441px;
+  align-items: center;
+}
+
+.post-modal__title {
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1;
+  color: #212121;
+  margin: 0;
+}
+
+.post-modal__close-btn {
+  background-image: url(../images/Group27.svg);
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  opacity: .4;
+  padding: 0;
+  margin: 0;
+  transition: opacity .2s ease-in-out;
+}
+
+.post-modal__close-btn:hover {
+  opacity: 1;
+}
+
+.post-modal__form {
+  max-width: 630px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.post-modal__label {
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1;
+  color: #212121B2;
+}
+
+.post-modal__input {
+  width: 604px;
+  border: 1px solid #21212166;
+  border-radius: 8px;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  color: #212121;
+  margin: 8px 0px 0px 0px;
+  padding: 10px 12px;
+  transition: border .2s linear;
+}
+
+.post-modal__input:hover {
+  border: 1px solid #212121;
+}
+
+.post-modal__input::placeholder {
+  color: #2121214d;
+}
+
+.post-modal__save-btn {
+  width: 156px;
+  height: 52px;
+  border: none;
+  border-radius: 8px;
+  background-color: #212121;
+  color: #fcf5e5;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  display: block;
+  padding: 18px 32px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .post-modal__container {
+    max-width: 300px;
+    padding: 12px;
+    gap: 24px;
+  }
+
+  .post-modal__head {
+    max-width: 276px;
+    gap: 130px;
+    align-self: center;
+  }
+
+
+  .post-modal__title {
+    font-size: 20px;
+  }
+
+  .post-modal__close-btn {
+  width: 36px;
+  height: 36px;
+  }
+
+  .post-modal__form {
+    width: 276px;
+    gap: 24px;
+    align-self: center;
+  }
+
+  .post-modal__label {
+    align-self: center;
+  }
+
+  .post-modal__input {
+    width: 252px;
+    font-size: 16px;
+  }
+
+  .post-modal__save-btn {
+    width: 276px;
+  }
+}
