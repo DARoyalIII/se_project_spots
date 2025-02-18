@@ -53,8 +53,8 @@ const addCaption = postModal.querySelector("#caption");
 
 // Picture preview
 const picModal = document.querySelector("#preview-modal");
-const picModalImg = picModal.querySelector(".pic-modal__img");
-const picModalCap = picModal.querySelector(".pic-modal__title");
+const picModalImg = picModal.querySelector(".modal__pic-img");
+const picModalCap = picModal.querySelector(".modal__pic-title");
 const picCloseButton = picModal.querySelector(".modal__close-btn");
 
 // Profile edit modal events
