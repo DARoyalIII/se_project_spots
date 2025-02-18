@@ -148,7 +148,7 @@ function handleNewPostSubmit(evt) {
   evt.preventDefault();
   const newCard = { name: addCaption.value, link: addImage.value};
   console.log(newCard);
-  cardsList.append(getCardElement(newCard));
+  cardsList.prepend(getCardElement(newCard));
   evt.target.reset();
   exitModal(postModal);
 }
