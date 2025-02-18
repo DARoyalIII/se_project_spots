@@ -64,13 +64,13 @@
   opacity: 1;
 }
 
-.btn-white {
+.modal__close-btn_white {
   background-image: url(../images/exitbutton.svg);
   opacity: 1;
   align-self: flex-start;
 }
 
-.btn-white:hover {
+.modal__close-btn_white:hover {
   opacity: .4;
 }
 
@@ -107,7 +107,7 @@
   color: #21212166;
 }
 
-.post-modal__input::placeholder {
+.modal__input_opacity_30::placeholder {
   color: #2121214d;
 }
 
