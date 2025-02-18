@@ -107,10 +107,6 @@
   color: #21212166;
 }
 
-.modal__input_opacity_30::placeholder {
-  color: #2121214d;
-}
-
 .modal__input:hover {
   border: 1px solid #212121;
 }
