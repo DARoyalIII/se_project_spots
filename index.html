@@ -63,7 +63,7 @@
         <h2 class="modal__title">Edit profile</h2>
         <button type="button" class="modal__close-btn"></button>
         </div>
-        <form class="modal__form">
+        <form class="modal__form" id="profile-form">
             <label for="name" class="modal__label">Name
               <input type="text" id="name" class="modal__input" placeholder="Type your name">
             </label>
@@ -75,26 +75,26 @@
       </div>
     </div>
   </div>
-  <div class="post-modal" id="post-modal-add">
-    <div class="post-modal__container">
-      <div class="post-modal__head">
-        <h2 class="post-modal__title">New post</h2>
+  <div class="modal" id="post-modal-add">
+    <div class="modal__container">
+      <div class="modal__head">
+        <h2 class="modal__title">New post</h2>
         <button class="modal__close-btn"></button>
       </div>
-      <form class="post-modal__form">
-        <label for="image" class="post-modal__label">Image link<input type="url" id="image" class="post-modal__input" placeholder="Paste a link to the picture"></label>
-        <label for="caption" class="post-modal__label">Caption<input type="text" id="caption" class="post-modal__input" placeholder="Type your caption"></label>
-        <button type="submit" class="post-modal__save-btn">Save</button>
+      <form class="modal__form">
+        <label for="image" class="modal__label">Image link<input type="url" id="image" class="modal__input" placeholder="Paste a link to the picture"></label>
+        <label for="caption" class="modal__label post-modal__input">Caption<input type="text" id="caption" class="modal__input post-modal__input" placeholder="Type your caption"></label>
+        <button type="submit" class="modal__save-btn">Save</button>
       </form>
     </div>
   </div>
-  <div class="pic-modal" id="preview-modal">
+  <div class="modal" id="preview-modal">
     <div class="pic-modal__container">
       <div class="pic-modal__info">
       <img src="" alt="" class="pic-modal__img">
-      <h2 class="pic-modal__title"></h2>
+      <p class="pic-modal__title"></p>
       </div>
-      <button class="pic-modal__close"></button>
+      <button class="modal__close-btn btn-white"></button>
     </div>
   </div>
   <script src="./scripts/index.js" defer></script>

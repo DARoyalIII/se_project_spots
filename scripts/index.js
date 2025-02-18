@@ -34,11 +34,10 @@ const newPost = document.querySelector(".profile__newpost-button");
 
 // Modal elements
 const editModal = document.querySelector("#edit-modal");
-const closeModal = editModal.querySelector(".modal__close-btn");
+const editCloseButton = editModal.querySelector(".modal__close-btn");
 const editModalName = editModal.querySelector("#name");
 const editModalDescrip = editModal.querySelector("#description");
-const profileFormElement = document.querySelector(".modal__form");
-const profileForm = document.forms["profile-form"];
+const profileFormElement = editModal.querySelector(".modal__form");
 
 // Card elements
 const cardTemplate = document.querySelector("#card-template");
@@ -46,8 +45,8 @@ const cardsList = document.querySelector(".cards__list");
 
 // New post elements
 const postModal = document.querySelector("#post-modal-add");
-const postClose = postModal.querySelector(".modal__close-btn");
-const postFormElement = postModal.querySelector(".post-modal__form");
+const newCloseButton = postModal.querySelector(".modal__close-btn");
+const postFormElement = postModal.querySelector(".modal__form");
 const addImage = postModal.querySelector("#image");
 const addCaption = postModal.querySelector("#caption");
 
@@ -56,10 +55,10 @@ const addCaption = postModal.querySelector("#caption");
 const picModal = document.querySelector("#preview-modal");
 const picModalImg = picModal.querySelector(".pic-modal__img");
 const picModalCap = picModal.querySelector(".pic-modal__title");
-const PicModalExit = picModal.querySelector(".pic-modal__close");
+const picCloseButton = picModal.querySelector(".modal__close-btn");
 
 // Profile edit modal events
-closeModal.addEventListener("click", () => {
+editCloseButton.addEventListener("click", () => {
   exitModal(editModal);
 });
 
@@ -76,11 +75,16 @@ newPost.addEventListener("click", () => {
   openModal(postModal);
 });
 
-postClose.addEventListener("click", () => {
+newCloseButton.addEventListener("click", () => {
   exitModal(postModal);
 })
 
+picCloseButton.addEventListener("click", () => {
+  exitModal(picModal);
+})
+
 postFormElement.addEventListener("submit", handleNewPostSubmit);
+
 
 // Opening modals
 function openModal(modal) {
@@ -111,7 +115,6 @@ function getCardElement(data) {
   cardImgEle.alt = data.name;
   cardNameEle.textContent = data.name;
   cardImgEle.src = data.link;
-  cardsList.append(cardElement);
 
   // Picture preview
   cardImgEle.addEventListener("click", () => {
@@ -120,11 +123,6 @@ function getCardElement(data) {
     picModalImg.alt = data.name;
     picModalCap.textContent = data.name;
   });
-
-  PicModalExit.addEventListener("click", () => {
-    exitModal(picModal);
-  })
-
 
   // Toggle like
   cardHeart.addEventListener("click", () => {
@@ -139,19 +137,22 @@ function getCardElement(data) {
   return cardElement;
 }
 
-initialCards.forEach(getCardElement);
+initialCards.forEach(data => {
+  const cardElement = getCardElement(data);
+  cardsList.append(cardElement);
+});
+
 
 // Submitting new post data
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
-  addImage.value;
-  addCaption.value;
   const newCard = { name: addCaption.value, link: addImage.value};
   console.log(newCard);
-  const cardEl = getCardElement(newCard);
-  cardsList.prepend(cardEl);
+  cardsList.append(getCardElement(newCard));
+  evt.target.reset();
   exitModal(postModal);
 }
+
 
 
 
