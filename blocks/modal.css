@@ -111,6 +111,21 @@
   border: 1px solid #212121;
 }
 
+.modal__error {
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1;
+  color: #ff0000b2;
+  display: block;
+  padding-top: 8px;
+}
+
+.modal__input_type_error {
+  border: 1px solid #ff000099;
+  outline: none;
+}
+
 .modal__save-btn {
   width: 156px;
   height: 52px;
@@ -125,6 +140,15 @@
   display: block;
   padding: 18px 32px;
   cursor: pointer;
+}
+
+.button_inactive {
+  background-color: #21212180;
+  cursor: default;
+}
+
+.button_inactive:hover {
+  background-color: #212121cc;
 }
 
 .modal__pic-container {
