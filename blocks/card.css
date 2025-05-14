@@ -9,6 +9,10 @@
   display: block;
 }
 
+.card__image:hover {
+  cursor: pointer;
+}
+
 .card__data {
   display: flex;
   padding-top: 12px;

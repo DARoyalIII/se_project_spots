@@ -2,7 +2,7 @@ const settings = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__save-btn",
-  inactiveButtonClass: "button_inactive",
+  inactiveButtonClass: "modal__save-btn_inactive",
   inputErrorClass: "modal__input_type_error",
   errorClass: "modal__error"
 };
@@ -34,7 +34,7 @@ const hasInvalidInput = (inputList) => {
 };
 
 const disableButton = (button) => {
-  button.classList.add("button_inactive");
+  button.classList.add("modal__save-btn_inactive");
   button.disabled = true;
 };
 
@@ -43,7 +43,7 @@ const toggleButtonState = (inputList, submitButton) => {
   if (hasInvalidInput(inputList)) {
     disableButton(submitButton);
   } else {
-    submitButton.classList.remove("button_inactive");
+    submitButton.classList.remove("modal__save-btn_inactive");
     submitButton.disabled = false;
   }
 };
@@ -80,26 +80,6 @@ const enableValidation = (config) => {
 
 enableValidation(settings);
 
-const modals = document.querySelectorAll(".modal");
-
-modals.forEach((modal) => {
-  modal.addEventListener("click", function(evt) {
-    if (event.target === modal) {
-      exitModal(modal);
-    }
-  });
-});
-
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'Escape') {
-    const openModals = document.querySelectorAll('.modal_opened');
-    openModals.forEach(modal => {
-      closeModal(modal);
-    });
-  }
-});
-
 function closeModal(modalElement) {
   modalElement.classList.remove('modal_opened');
 }
-

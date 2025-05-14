@@ -40,6 +40,7 @@ const editCloseButton = editModal.querySelector(".modal__close-btn");
 const editModalName = editModal.querySelector("#name");
 const editModalDescrip = editModal.querySelector("#description");
 const profileFormElement = editModal.querySelector(".modal__form");
+const modals = document.querySelectorAll(".modal");
 
 // Card elements
 const cardTemplate = document.querySelector("#card-template");
@@ -90,15 +91,27 @@ picCloseButton.addEventListener("click", () => {
 
 postFormElement.addEventListener("submit", handleNewPostSubmit);
 
+function handleEscape(event) {
+  if (event.key === 'Escape') {
+    const openModals = document.querySelectorAll('.modal_opened');
+    openModals.forEach(modal => {
+      closeModal(modal);
+    });
+  }
+}
+
+
 
 // Opening modals
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener('keydown', handleEscape);
 }
 
 // Exiting moodals
 function exitModal(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener('keydown', handleEscape);
 }
 
 // Submitting updated profile data
@@ -159,9 +172,13 @@ function handleNewPostSubmit(evt) {
   exitModal(postModal);
 }
 
-
-
-
+modals.forEach((modal) => {
+  modal.addEventListener("click", function(evt) {
+    if (event.target === modal) {
+      exitModal(modal);
+    }
+  });
+});
 
 
 
